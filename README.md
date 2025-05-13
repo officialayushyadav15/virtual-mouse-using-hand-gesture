@@ -35,12 +35,13 @@ This project implements a **virtual mouse controller** using your hand gestures,
 
 ## 🧠 Gesture Detection Explanation
 
+- Full MediaPipe hand landmark map:
+  ![MediaPipe Landmarks](mediapipehandgesture.jpeg)
+
 - **Angles between fingers** help differentiate gestures.
 - For example, `get_angle()` computes the angle between three landmarks (A-B-C).
   ![Angle Detection Logic](fun_get_angle.jpg)
 
-- Full MediaPipe hand landmark map:
-  ![MediaPipe Landmarks](mediapipehandgesture.jpeg)
 
 ---
 
@@ -151,5 +152,3 @@ Feel free to open issues or submit pull requests. Any improvements or gesture ad
 
 
 ### 🚀 Happy Coding and Gesture-Controlling! 👋
-
-```
