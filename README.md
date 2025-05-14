@@ -33,15 +33,49 @@ This project implements a **virtual mouse controller** using your hand gestures,
 
 ---
 
+---
+
 ## 🧠 Gesture Detection Explanation
 
-- Full MediaPipe hand landmark map:
-  ![MediaPipe Landmarks](mediapipehandgesture.jpeg)
+Hand gesture detection in this project relies on two main techniques:
+1. Tracking **21 key landmarks** using MediaPipe's hand tracking solution.
+2. Computing **angles and distances** between key points to identify specific gestures.
 
-- **Angles between fingers** help differentiate gestures.
-- For example, `get_angle()` computes the angle between three landmarks (A-B-C).
-  ![Angle Detection Logic](fun_get_angle.jpg)
+### 🖐️ MediaPipe Hand Landmarks
 
+The image below shows all 21 landmarks that MediaPipe detects in a hand. Each landmark corresponds to a specific joint or fingertip:
+
+- Each finger has four key points (MCP, PIP, DIP, TIP).
+- The **wrist** is landmark `0`, and **index finger tip** is `8`, which is crucial for cursor movement.
+
+![MediaPipe Landmarks](mediapipehandgesture.jpeg)
+
+### 📐 Angle Detection with `get_angle()`
+
+To detect gestures like clicks, we need to check how fingers bend or straighten. This is done using angles between three consecutive landmarks.
+
+For instance, if we take three points A, B, and C:
+- The function `get_angle(a, b, c)` calculates the angle at point **B**.
+- This is done by subtracting the angle between line AB and the x-axis from the angle between line BC and the x-axis.
+
+This is useful for identifying gestures like pinching, tapping, or holding.
+
+#### 📊 Example Illustration:
+
+![Angle Detection Logic](fun_get_angle.jpg)
+
+- **Angle 1** is the angle between vector **AB** and the x-axis.
+- **Angle 2** is the angle between vector **BC** and the x-axis.
+- The required angle used in gesture recognition is `Angle 1 - Angle 2`.
+
+This mechanism allows the program to recognize the degree of bend in fingers like the index or thumb, which is used to infer clicks, movement, or screenshot gestures.
+
+- MediaPipe provides precise hand tracking via its 21-point model.
+- Angles are used to detect finger gestures:
+  - Small angles between joints suggest bent fingers (used for clicks).
+  - Larger distances between certain fingers can imply gestures like open hand (used for mouse movement or screenshots).
+
+These combined techniques enable the hands to act like a virtual mouse, enabling contactless control.
 
 ---
 
@@ -160,6 +194,34 @@ virtual-mouse-gesture/
 | `pip install -r requirements.txt` | Install dependencies           |
 | `python virtual_mouse.py`         | Run the project                |
 | Press `q`                         | Quit webcam viewer             |
+
+---
+
+
+
+## 🔗 References
+
+- 📘 [MediaPipe Hand Landmarker (Google AI)](https://ai.google.dev/edge/mediapipe/solutions/vision/hand_landmarker)
+- 📘 [OpenCV Python (PyPI)](https://pypi.org/project/opencv-python/)
+- 📘 [PyAutoGUI Documentation](https://pyautogui.readthedocs.io/en/latest/)
+- 📘 [Pynput Mouse Control](https://pynput.readthedocs.io/en/latest/mouse.html)
+- 📘 [Python 3.10 Official Release](https://www.python.org/downloads/release/python-3100/)
+- 📘 [NumPy (PyPI)](https://pypi.org/project/numpy/)
+
+---
+
+
+
+## 🙋‍♂️ About Me
+
+I'm Ayush Yadav, a passionate developer with an interest in computer vision, automation, and innovative tech solutions.  
+Always exploring new technologies and building things that matter.
+
+### Let’s connect:
+
+- 📧 **Email:** [officialayushyadav15@gmail.com](mailto:officialayushyadav15@gmail.com)
+- 💼 **GitHub:** [@officialayushyadav15](https://github.com/officialayushyadav15)
+- 🔗 **LinkedIn:** [Ayush Yadav](https://www.linkedin.com/in/ayush-yadav-408924230/)
 
 ---
 
