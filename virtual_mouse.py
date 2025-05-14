@@ -72,7 +72,7 @@ def detect_gestures(frame, landmarks_list, processed):
         elif is_screenshot(landmarks_list,thumb_index_dist) : # check for screenshot click
             im1 = pyautogui.screenshot()
             label = random.randint(1,1000)
-            im1.save(f'my_screenshot_{label}.png')
+            im1.save(f'D:/virtual mouse using hand gesture/virtual-mouse-using-hand-gesture/screenshot/my_screenshot_{label}.png')
             cv2.putText(frame, "Screenshot", (50,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 0), 2)
 
 def main():
