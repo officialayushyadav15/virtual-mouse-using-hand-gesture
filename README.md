@@ -54,8 +54,8 @@ Below is a table showing how each finger behaves for the various actions. The ce
 | **Functionality**     | **Thumb** | **Index** | **Middle** | **Ring** | **Pinky** |
 |-----------------------|-----------|-----------|------------|----------|-----------|
 | **Move Mouse**        | Close      | Open      | Open       | Close    | Close     |
-| **Left Click**        | Open      | Open      | Close      | Close    | Close     |
-| **Right Click**       | Open      | Close     | Open       | Close    | Close     |
+| **Left Click**        | Open      | Close      | Open      | Close    | Close     |
+| **Right Click**       | Open      | Open     | Close       | Close    | Close     |
 | **Double Click**      | Open      | Close      | Close       | Close     | Close      |
 | **Screenshot**        | Open      | Open      | Close      | Close    | Open      |
 
