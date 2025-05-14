@@ -47,38 +47,36 @@ This project implements a **virtual mouse controller** using your hand gestures,
 
 ## ✋ Gesture-to-Action Mapping
 
-🖋️ Finger Position for Each Gesture
-Below is a table showing how each finger behaves for the various actions. The cells contain the status of each finger (Open or Close) for the respective gesture:
+### 🖋️ Finger Position for Each Gesture
 
-Functionality	Thumb	Index	Middle	Ring	Pinky
-Move Mouse	Open	Open	Open	Close	Close
-Left Click	Open	Open	Close	Close	Close
-Right Click	Open	Close	Open	Close	Close
-Double Click	Open	Open	Open	Open	Open
-Screenshot	Open	Open	Close	Close	Open
+Below is a table showing how each finger behaves for the various actions. The cells contain the status of each finger (`Open` or `Close`) for the respective gesture:
 
-📷 Gesture-to-Action Illustration
+| **Functionality**     | **Thumb** | **Index** | **Middle** | **Ring** | **Pinky** |
+|-----------------------|-----------|-----------|------------|----------|-----------|
+| **Move Mouse**        | Open      | Open      | Open       | Close    | Close     |
+| **Left Click**        | Open      | Open      | Close      | Close    | Close     |
+| **Right Click**       | Open      | Close     | Open       | Close    | Close     |
+| **Double Click**      | Open      | Open      | Open       | Open     | Open      |
+| **Screenshot**        | Open      | Open      | Close      | Close    | Open      |
+
+### 📷 Gesture-to-Action Illustration
+
 Here’s a clear visual representation of the gestures and finger movements for each action:
 
-Move Mouse:
+- **Move Mouse:**  
+  - First two fingers straight, others curled.
+  
+- **Left Click:**  
+  - Index finger up + thumb away + others curled.
 
-First two fingers straight, others curled.
+- **Right Click:**  
+  - Middle finger up + thumb away + others curled.
+  
+- **Double Click:**  
+  - All fingers curled, index finger up + thumb away.
 
-Left Click:
-
-Index finger up + thumb away + others curled.
-
-Right Click:
-
-Middle finger up + thumb away + others curled.
-
-Double Click:
-
-All fingers curled, index finger up + thumb away.
-
-Screenshot:
-
-Middle and ring fingers curled, others open.
+- **Screenshot:**  
+  - Middle and ring fingers curled, others open.
 ---
 
 ## 🧪 Setup Instructions
