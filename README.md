@@ -41,8 +41,6 @@ Hand gesture detection in this project relies on two main techniques:
 1. Tracking **21 key landmarks** using MediaPipe's hand tracking solution.
 2. Computing **angles and distances** between key points to identify specific gestures.
 
-
-
 ### 🖐️ MediaPipe Hand Landmarks
 
 The image below shows all 21 landmarks that MediaPipe detects in a hand. Each landmark corresponds to a specific joint or fingertip:
@@ -51,7 +49,6 @@ The image below shows all 21 landmarks that MediaPipe detects in a hand. Each la
 - The **wrist** is landmark `0`, and **index finger tip** is `8`, which is crucial for cursor movement.
 
 ![MediaPipe Landmarks](mediapipehandgesture.jpeg)
-
 
 ### 📐 Angle Detection with `get_angle()`
 
@@ -73,15 +70,12 @@ This is useful for identifying gestures like pinching, tapping, or holding.
 
 This mechanism allows the program to recognize the degree of bend in fingers like the index or thumb, which is used to infer clicks, movement, or screenshot gestures.
 
-
-
 - MediaPipe provides precise hand tracking via its 21-point model.
 - Angles are used to detect finger gestures:
   - Small angles between joints suggest bent fingers (used for clicks).
   - Larger distances between certain fingers can imply gestures like open hand (used for mouse movement or screenshots).
 
 These combined techniques enable the hands to act like a virtual mouse, enabling contactless control.
-
 
 ---
 
