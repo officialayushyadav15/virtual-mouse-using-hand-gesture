@@ -97,13 +97,14 @@ Below is a table showing how each finger behaves for the various actions. The ce
 
 Below is a clear visual representation of each gesture, how it works, and what it looks like in action:
 
-| **Operation**   | **How It Works**                                                                 | **Depiction**             |
-|-----------------|-----------------------------------------------------------------------------------|----------------------------|
-| Move Mouse      | First two fingers straight, others curled.                                        | ![Move Mouse](move.png)    |
-| Left Click      | Index finger up + thumb away + others curled.                                     | ![Left Click](left_click.png) |
-| Right Click     | Middle finger up + thumb away + others curled.                                    | ![Right Click](right_click.png) |
-| Double Click    | All fingers curled, index finger up + thumb away.                                 | ![Double Click](double_click.png) |
-| Screenshot      | Middle and ring fingers curled, others open.                                      | ![Screenshot](screenshot.png) |
+| **Operation**   | **How It Works**                                                               | **Depiction**                 |
+|:---------------:|:--------------------------------------------------------------------------------:|:-----------------------------:|
+| **Move Mouse**  | First two fingers straight, others curled.                                      | ![Move Mouse](move.png)       |
+| **Left Click**  | Index finger up + thumb away + others curled.                                   | ![Left Click](left_click.png) |
+| **Right Click** | Middle finger up + thumb away + others curled.                                  | ![Right Click](right_click.png) |
+| **Double Click**| All fingers curled, index finger up + thumb away.                               | ![Double Click](double_click.png) |
+| **Screenshot**  | Middle and ring fingers curled, others open.                                    | ![Screenshot](screenshot.png) |
+
 
 ---
 
