@@ -47,17 +47,38 @@ This project implements a **virtual mouse controller** using your hand gestures,
 
 ## ✋ Gesture-to-Action Mapping
 
-| Gesture Description | Action |
-|---------------------|--------|
-| Index finger pointing (other fingers curled) | Move mouse |
-| Index finger up + thumb away + other fingers curled | Left click |
-| Middle finger up + thumb away + other fingers curled | Right click |
-| Index + middle fingers up + thumb away | Double click |
-| Index + thumb far apart + specific fingers close together | Screenshot |
+🖋️ Finger Position for Each Gesture
+Below is a table showing how each finger behaves for the various actions. The cells contain the status of each finger (Open or Close) for the respective gesture:
 
-> Example image:  
-> ![Gesture Mapping](gesture_to_action_map.jpg)
+Functionality	Thumb	Index	Middle	Ring	Pinky
+Move Mouse	Open	Open	Open	Close	Close
+Left Click	Open	Open	Close	Close	Close
+Right Click	Open	Close	Open	Close	Close
+Double Click	Open	Open	Open	Open	Open
+Screenshot	Open	Open	Close	Close	Open
 
+📷 Gesture-to-Action Illustration
+Here’s a clear visual representation of the gestures and finger movements for each action:
+
+Move Mouse:
+
+First two fingers straight, others curled.
+
+Left Click:
+
+Index finger up + thumb away + others curled.
+
+Right Click:
+
+Middle finger up + thumb away + others curled.
+
+Double Click:
+
+All fingers curled, index finger up + thumb away.
+
+Screenshot:
+
+Middle and ring fingers curled, others open.
 ---
 
 ## 🧪 Setup Instructions
