@@ -150,7 +150,11 @@ Press `q` to quit the webcam window.
 
 ## 📹 Demo Video
 
-[![Watch the video](https://img.youtube.com/vi/VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID_HERE)
+
+
+https://github.com/user-attachments/assets/a2e90283-1ecb-49ff-bf7f-8e3b1b823e4b
+
+
 
 ---
 
