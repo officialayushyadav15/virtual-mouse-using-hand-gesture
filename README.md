@@ -53,10 +53,10 @@ Below is a table showing how each finger behaves for the various actions. The ce
 
 | **Functionality**     | **Thumb** | **Index** | **Middle** | **Ring** | **Pinky** |
 |-----------------------|-----------|-----------|------------|----------|-----------|
-| **Move Mouse**        | Open      | Open      | Open       | Close    | Close     |
+| **Move Mouse**        | Close      | Open      | Open       | Close    | Close     |
 | **Left Click**        | Open      | Open      | Close      | Close    | Close     |
 | **Right Click**       | Open      | Close     | Open       | Close    | Close     |
-| **Double Click**      | Open      | Open      | Open       | Open     | Open      |
+| **Double Click**      | Open      | Close      | Close       | Close     | Close      |
 | **Screenshot**        | Open      | Open      | Close      | Close    | Open      |
 
 ### 📷 Gesture-to-Action Illustration
