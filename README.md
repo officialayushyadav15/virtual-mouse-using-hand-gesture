@@ -163,6 +163,34 @@ virtual-mouse-gesture/
 
 ---
 
+
+
+## 🔗 References
+
+- 📘 [MediaPipe Hand Landmarker (Google AI)](https://ai.google.dev/edge/mediapipe/solutions/vision/hand_landmarker)
+- 📘 [OpenCV Python (PyPI)](https://pypi.org/project/opencv-python/)
+- 📘 [PyAutoGUI Documentation](https://pyautogui.readthedocs.io/en/latest/)
+- 📘 [Pynput Mouse Control](https://pynput.readthedocs.io/en/latest/mouse.html)
+- 📘 [Python 3.10 Official Release](https://www.python.org/downloads/release/python-3100/)
+- 📘 [NumPy (PyPI)](https://pypi.org/project/numpy/)
+
+---
+
+
+
+## 🙋‍♂️ About Me
+
+I'm Ayush Yadav, a passionate developer with an interest in computer vision, automation, and innovative tech solutions.  
+Always exploring new technologies and building things that matter.
+
+### Let’s connect:
+
+- 📧 **Email:** [officialayushyadav15@gmail.com](mailto:officialayushyadav15@gmail.com)
+- 💼 **GitHub:** [@officialayushyadav15](https://github.com/officialayushyadav15)
+- 🔗 **LinkedIn:** [Ayush Yadav](https://www.linkedin.com/in/ayush-yadav-408924230/)
+
+---
+
 ## 🤝 Contributions
 
 Feel free to open issues or submit pull requests. Any improvements or gesture additions are welcome!
