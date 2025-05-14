@@ -33,16 +33,16 @@ def move_mouse(index_finger_tip):
         pyautogui.moveTo(x,y)
 
 def is_left_click(landmarks_list, thumb_index_dist):
-    return(util.get_angle(landmarks_list[5], landmarks_list[6], landmarks_list[8]) < 50 and util.get_angle(landmarks_list[9], landmarks_list[10], landmarks_list[12]) > 90 and thumb_index_dist > 50) 
+    return(util.get_angle(landmarks_list[5], landmarks_list[6], landmarks_list[8]) < 50 and util.get_angle(landmarks_list[9], landmarks_list[10], landmarks_list[12]) > 90 and thumb_index_dist > 50 and util.get_angle(landmarks_list[13], landmarks_list[14], landmarks_list[16]) < 50 and util.get_angle(landmarks_list[17], landmarks_list[18], landmarks_list[20]) < 50) 
 
 def is_right_click(landmarks_list, thumb_index_dist):
-    return(util.get_angle(landmarks_list[5], landmarks_list[6], landmarks_list[8]) > 90 and util.get_angle(landmarks_list[9], landmarks_list[10], landmarks_list[12]) < 50 and thumb_index_dist > 50) 
+    return(util.get_angle(landmarks_list[5], landmarks_list[6], landmarks_list[8]) > 90 and util.get_angle(landmarks_list[9], landmarks_list[10], landmarks_list[12]) < 50 and thumb_index_dist > 50 and util.get_angle(landmarks_list[13], landmarks_list[14], landmarks_list[16]) < 50 and util.get_angle(landmarks_list[17], landmarks_list[18], landmarks_list[20]) < 50) 
 
 def is_double_click(landmarks_list, thumb_index_dist):
-    return(util.get_angle(landmarks_list[5], landmarks_list[6], landmarks_list[8]) < 50 and util.get_angle(landmarks_list[9], landmarks_list[10], landmarks_list[12]) < 50 and thumb_index_dist > 50) 
+    return(util.get_angle(landmarks_list[5], landmarks_list[6], landmarks_list[8]) < 50 and util.get_angle(landmarks_list[9], landmarks_list[10], landmarks_list[12]) < 50 and thumb_index_dist > 50 and util.get_angle(landmarks_list[13], landmarks_list[14], landmarks_list[16]) < 50 and util.get_angle(landmarks_list[17], landmarks_list[18], landmarks_list[20]) < 50) 
 
 def is_screenshot(landmarks_list, thumb_index_dist):
-    return(util.get_angle(landmarks_list[5], landmarks_list[6], landmarks_list[8]) < 50 and util.get_angle(landmarks_list[9], landmarks_list[10], landmarks_list[12]) > 90 and thumb_index_dist < 50 and util.get_angle(landmarks_list[13], landmarks_list[14], landmarks_list[16]) < 50 and util.get_angle(landmarks_list[17], landmarks_list[18], landmarks_list[20]) < 50) 
+    return(thumb_index_dist > 50 and util.get_distance([landmarks_list[8] ,landmarks_list[5]]) > 50 and util.get_distance([landmarks_list[16] ,landmarks_list[13]]) < 50 and util.get_distance([landmarks_list[12] ,landmarks_list[9]]) < 50 and util.get_distance([landmarks_list[20] ,landmarks_list[17]]) > 50 ) 
 
 def detect_gestures(frame, landmarks_list, processed):
     if len(landmarks_list)>=21:
@@ -70,9 +70,9 @@ def detect_gestures(frame, landmarks_list, processed):
 
 
         elif is_screenshot(landmarks_list,thumb_index_dist) : # check for screenshot click
-            img1 = pyautogui.screenshot()
+            im1 = pyautogui.screenshot()
             label = random.randint(1,1000)
-            img1.save(f'my_screenshot_{label}.jpeg')
+            im1.save(f'my_screenshot_{label}.png')
             cv2.putText(frame, "Screenshot", (50,50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 0), 2)
 
 def main():
@@ -109,6 +109,9 @@ def main():
             if cv2.waitKey(1) & 0xFF == ord('q'):  #wat for 1 millisecond after each frame and if input in keyboard is q then break i.e. to close the video capturing  and ord('q') take ascii value of q
                 break
 
+    except KeyboardInterrupt:
+        print("\n[INFO] Exiting program...")
+    
     finally:
         cap.release()
         cv2.destroyAllWindows()
